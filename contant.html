@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - NexaCore</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary: #6c63ff;
+        --secondary: #4d44db;
+      }
+
+      body {
+        padding-top: 80px; /* Menambah padding atas seukuran navbar */
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 100vh; /* Memastikan body mengisi viewport */
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.712);
+        border-radius: 50px;
+        border-radius: 50px;
+        padding: 0.5rem 1.5rem;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        z-index: 1000;
+        height: 60px;
+        box-shadow: 0 2px 10px rgba(1, 9, 74, 0.739);
+      }
+
+      .navbar-brand {
+        font-weight: 500;
+        color: rgb(6, 16, 80);
+        font-size: 24px;
+        transition: 0.3s color;
+        display: flex;
+        align-items: center; /* Untuk vertikal alignment */
+        height: 100%;
+      }
+      .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+      }
+      .navbar-toggler:focus,
+      .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      .navbar-toggler:focus,
+      .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      .nav-link {
+        color: #0b1668;
+        font-weight: 500;
+        position: relative;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: rgb(248, 246, 246);
+      }
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #f5f5f5;
+        visibility: hidden;
+        transition: 0.2s ease-in-out;
+      }
+      .nav-link:hover::before,
+      .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+      }
+
+      .contact-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.551);
+        transition: all 0.3s ease;
+        background: white;
+        padding: 20px;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+
+      .form-control {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        border: none;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: #0b1668;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      .contact-card {
+        padding: 15px;
+      }
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#"><i class="bi bi-cpu me-2"></i>NexaCore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Nexacore</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="tim.html">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" href="contant.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold">Contant Us</h2>
+          <p class="text-muted">Isi formulir berikut atau hubungi langsung melalui informasi kontak kami.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-card h-100">
+            <h3 class="fw-bold mb-3">Formulir Kontak</h3>
+            <form>
+              <div class="row g-2">
+                <div class="col-md-6 mb-3">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Alamat Email</label>
+                  <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="pesan" class="form-label">Pesan Anda</label>
+                  <textarea class="form-control" id="pesan" rows="3" required></textarea>
+                </div>
+                <div id="formAlert" class="alert d-none mt-3"></div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Kirim</i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <div class="contact-card h-100">
+            <h3 class="fw-bold mb-3">Informasi Kontak</h3>
+
+            <div class="d-flex mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Alamat Kantor</h5>
+                <p class="mb-0">NexaCore Tower, Jl. Teknologi No. 123, Jakarta</p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Email</h5>
+                <p class="mb-0">
+                  <a href="mailto:support@nexacore.id" class="text-decoration-none">support@nexacore.id</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex mb-3">
+              <div class="contact-icon me-3">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Telepon</h5>
+                <p class="mb-0"><a href="tel:+622112345678" class="text-decoration-none">+62 21 1234 5678</a><br /></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="contact-icon me-3">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Jam Operasional</h5>
+                <p class="mb-0">
+                  Senin-Jumat: 08.00-17.00<br />
+                  Sabtu: 08.00-12.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const alertBox = document.getElementById("formAlert");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("nama").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("pesan").value.trim();
+
+          if (name && email && message) {
+            alertBox.className = "alert alert-success mt-3";
+            alertBox.innerText = `Terima kasih, ${name}. Pesan Anda telah dikirim!`;
+            alertBox.classList.remove("d-none");
+            form.reset();
+
+            // Sembunyikan alert setelah 5 detik
+            setTimeout(() => {
+              alertBox.classList.add("d-none");
+            }, 5000);
+          } else {
+            alertBox.className = "alert alert-danger mt-3";
+            alertBox.innerText = "Mohon lengkapi semua bidang formulir.";
+            alertBox.classList.remove("d-none");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
