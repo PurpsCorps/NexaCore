@@ -7,10 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <style>
-      html,
-      body {
-        overflow: hidden;
-      }
       body {
         background-color: #f0f2f5;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -77,11 +73,18 @@
       }
       .team-section {
         padding: 60px 0;
+        overflow-y: auto;
+        flex-grow: 1;
+      }
+      .team-container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
       .card {
         border: none;
         border-radius: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
       }
       .card:hover {
         transform: translateY(-10px);
@@ -111,6 +114,18 @@
       h2 {
         color: #0b1668;
       }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .team-section {
+          padding: 40px 15px;
+        }
+        .card-img-top {
+          width: 120px;
+          height: 120px;
+          margin-top: -60px;
+        }
+      }
     </style>
   </head>
 
@@ -130,7 +145,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link mx-lg-2" aria-current="page" href="home.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-lg-2" href="service.html">Services</a>
@@ -150,53 +165,54 @@
       </div>
     </nav>
 
-    <div class="container team-section">
-      <h2 class="text-center fw-bold mb-5">Our Team</h2>
-      <br />
-      <div class="row justify-content-center g-4">
-        <!-- Anggota 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card text-center p-4">
-            <img src="fajry.jpg" alt="CEO" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title">Muhamad Ridho Alfajry</h5>
-              <p class="text-muted">Chief Executive Officer (CEO)</p>
-              <p class="card-text">Bertanggung jawab atas visi strategis perusahaan dan pengambilan keputusan tingkat tinggi.</p>
-              <div class="social-icons">
-                <a href="https://wa.me/6285783418317S9"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+    <div class="team-section">
+      <div class="team-container">
+        <h2 class="text-center fw-bold mb-5">Our Team</h2>
+        <div class="row justify-content-center g-4">
+          <!-- Anggota 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card text-center p-4">
+              <img src="fajry.jpg" alt="CEO" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Muhamad Ridho Alfajry</h5>
+                <p class="text-muted">Chief Executive Officer (CEO)</p>
+                <p class="card-text">Bertanggung jawab atas visi strategis perusahaan dan pengambilan keputusan tingkat tinggi.</p>
+                <div class="social-icons">
+                  <a href="https://wa.me/6285783418317S9"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Anggota 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card text-center p-4">
-            <img src="zilda.jpg" alt="CTO" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title">Zilda Ananda</h5>
-              <p class="text-muted">Chief Technology Officer (CTO)</p>
-              <p class="card-text">Memimpin pengembangan teknologi, arsitektur sistem, dan inovasi produk digital.</p>
-              <div class="social-icons">
-                <a href="https://wa.me/6282371357739"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+          <!-- Anggota 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card text-center p-4">
+              <img src="zilda.jpg" alt="CTO" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Zilda Ananda</h5>
+                <p class="text-muted">Chief Technology Officer (CTO)</p>
+                <p class="card-text">Memimpin pengembangan teknologi, arsitektur sistem, dan inovasi produk digital.</p>
+                <div class="social-icons">
+                  <a href="https://wa.me/6282371357739"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Anggota 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card text-center p-4">
-            <img src="zzaki.jpg" alt="UI/UX Designer" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title">Zaki Diah Ulhaq</h5>
-              <p class="text-muted">Lead UI/UX Designer</p>
-              <p class="card-text">Mendesain antarmuka visual dan pengalaman pengguna yang intuitif dan menarik untuk semua platform.</p>
-              <div class="social-icons">
-                <a href="https://wa.me/6282154930474"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+          <!-- Anggota 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card text-center p-4">
+              <img src="zzaki.jpg" alt="UI/UX Designer" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">Zaki Diah Ulhaq</h5>
+                <p class="text-muted">Lead UI/UX Designer</p>
+                <p class="card-text">Mendesain antarmuka visual dan pengalaman pengguna yang intuitif dan menarik untuk semua platform.</p>
+                <div class="social-icons">
+                  <a href="https://wa.me/6282154930474"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/sibilb24?igsh=MXU4a2Nmb2d1NjRrOA=="><i class="bi bi-instagram"></i></a>
+                </div>
               </div>
             </div>
           </div>
